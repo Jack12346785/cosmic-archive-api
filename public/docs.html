@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosmic Archive API Docs</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0e1b2d;
+      --line: #1d3552;
+      --text: #e6eef8;
+      --muted: #8da4be;
+      --accent: #7cf2c9;
+      --accent-2: #ffd166;
+      --code: #08101b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Avenir Next", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(124,242,201,0.15), transparent 25%),
+        linear-gradient(180deg, #08101b, var(--bg));
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1, h2, h3 { margin: 0 0 12px; }
+    p { color: var(--muted); line-height: 1.55; }
+    .hero { margin-bottom: 28px; }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      background: rgba(14, 27, 45, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+    }
+    code, pre {
+      font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+      font-size: 0.94rem;
+    }
+    pre {
+      white-space: pre-wrap;
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      overflow-x: auto;
+    }
+    .method {
+      font-weight: 700;
+      color: var(--accent-2);
+      margin-right: 10px;
+    }
+    .path { color: var(--accent); }
+    ul { padding-left: 18px; color: var(--muted); }
+    .footer { margin-top: 24px; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="tag">Public API Docs</div>
+      <h1>Cosmic Archive API</h1>
+      <p>A small sci-fi API for sectors, anomalies, and custom mission briefs. No auth required.</p>
+      <p>Base URL: <code id="baseUrl"></code></p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2><span class="method">GET</span><span class="path">/api/health</span></h2>
+        <p>Quick uptime and metadata check.</p>
+        <pre>curl <span class="host"></span>/api/health</pre>
+      </article>
+
+      <article class="card">
+        <h2><span class="method">GET</span><span class="path">/api/sectors</span></h2>
+        <p>Returns all known sectors. Optional filter: <code>?dangerLevel=high</code>.</p>
+        <pre>curl "<span class="host"></span>/api/sectors?dangerLevel=high"</pre>
+      </article>
+
+      <article class="card">
+        <h2><span class="method">GET</span><span class="path">/api/sectors/:id</span></h2>
+        <p>Returns one sector plus related anomalies and mission count.</p>
+        <pre>curl <span class="host"></span>/api/sectors/umbra-veil</pre>
+      </article>
+
+      <article class="card">
+        <h2><span class="method">GET</span><span class="path">/api/anomalies</span></h2>
+        <p>List anomalies. Filters: <code>?sectorId=...</code>, <code>?type=signal</code>, <code>?minSeverity=4</code>.</p>
+        <pre>curl "<span class="host"></span>/api/anomalies?type=signal&minSeverity=4"</pre>
+      </article>
+
+      <article class="card">
+        <h2><span class="method">GET</span><span class="path">/api/feed</span></h2>
+        <p>Returns a mixed exploration feed of anomalies and open missions. Optional <code>?count=5</code>.</p>
+        <pre>curl "<span class="host"></span>/api/feed?count=5"</pre>
+      </article>
+
+      <article class="card">
+        <h2><span class="method">POST</span><span class="path">/api/missions</span></h2>
+        <p>Create a mission brief. Required JSON fields: <code>captain</code>, <code>sectorId</code>, <code>objective</code>.</p>
+        <pre>curl -X POST <span class="host"></span>/api/missions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "captain": "Mira Keene",
+    "sectorId": "ember-null",
+    "objective": "Capture thermal readings inside Ember Mouth",
+    "shipClass": "surveyor",
+    "riskBudget": 4
+  }'</pre>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 16px;">
+      <h2>Response Shape Example</h2>
+      <pre>{
+  "mission": {
+    "id": "msn_ab12cd34",
+    "callsign": "EMBER-482",
+    "captain": "Mira Keene",
+    "sectorId": "ember-null",
+    "objective": "Capture thermal readings inside Ember Mouth",
+    "shipClass": "surveyor",
+    "status": "briefing",
+    "riskBudget": 4,
+    "createdAt": "2026-05-02T21:00:00.000Z"
+  }
+}</pre>
+      <p class="footer">Auth: none. This API is intentionally open for demos and experiments.</p>
+    </section>
+  </main>
+  <script>
+    const base = window.location.origin;
+    document.getElementById("baseUrl").textContent = base;
+    document.querySelectorAll(".host").forEach((el) => {
+      el.textContent = base;
+    });
+  </script>
+</body>
+</html>

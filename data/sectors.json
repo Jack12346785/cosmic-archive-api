@@ -1,0 +1,38 @@
+[
+  {
+    "id": "solstice-drift",
+    "name": "Solstice Drift",
+    "region": "Perihelion Belt",
+    "dangerLevel": "moderate",
+    "summary": "A trade corridor where derelict solar mirrors keep waking up at sunrise.",
+    "hazards": ["flare ghosts", "reflective debris", "signal refraction"],
+    "stations": ["Lumen Dock", "Glasswake Relay"]
+  },
+  {
+    "id": "umbra-veil",
+    "name": "Umbra Veil",
+    "region": "Darkwater Expanse",
+    "dangerLevel": "high",
+    "summary": "A dust-thick sector where navigation AI reports phantom coastlines in empty space.",
+    "hazards": ["sensor blackout", "rogue gravity tides", "pirate salvage clans"],
+    "stations": ["Noctis Span"]
+  },
+  {
+    "id": "verdant-rung",
+    "name": "Verdant Rung",
+    "region": "Lattice Frontier",
+    "dangerLevel": "low",
+    "summary": "A habitable ring seeded with algae towers and biotech monasteries.",
+    "hazards": ["pollen storms", "spore blooms"],
+    "stations": ["Mossline Port", "Saint Chloris Lift"]
+  },
+  {
+    "id": "ember-null",
+    "name": "Ember Null",
+    "region": "Ash Spiral",
+    "dangerLevel": "extreme",
+    "summary": "A collapsed mining zone that still radiates distress beacons from ships long recycled.",
+    "hazards": ["molten shrapnel", "hull-eating ash", "hostile drones"],
+    "stations": ["Black Kiln Refuge"]
+  }
+]

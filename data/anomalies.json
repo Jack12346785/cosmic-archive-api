@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ghost-lighthouse",
+    "name": "Ghost Lighthouse",
+    "sectorId": "solstice-drift",
+    "type": "signal",
+    "severity": 3,
+    "description": "A beacon that transmits docking instructions for a station that vanished 41 years ago.",
+    "rewardHint": "Recover antique star charts."
+  },
+  {
+    "id": "cathedral-tide",
+    "name": "Cathedral Tide",
+    "sectorId": "umbra-veil",
+    "type": "gravity",
+    "severity": 5,
+    "description": "A wavefront of folded mass that turns ship hulls into resonant instruments.",
+    "rewardHint": "Capture harmonics for high-end nav labs."
+  },
+  {
+    "id": "bloom-engine",
+    "name": "Bloom Engine",
+    "sectorId": "verdant-rung",
+    "type": "biotech",
+    "severity": 2,
+    "description": "A kilometer-wide seed machine quietly growing a second ecosystem in orbit.",
+    "rewardHint": "Broker biotech patents."
+  },
+  {
+    "id": "ember-mouth",
+    "name": "Ember Mouth",
+    "sectorId": "ember-null",
+    "type": "thermal",
+    "severity": 4,
+    "description": "A furnace rift that exhales molten particulate in mathematically precise pulses.",
+    "rewardHint": "Mine rare refractory isotopes."
+  },
+  {
+    "id": "choir-of-static",
+    "name": "Choir of Static",
+    "sectorId": "umbra-veil",
+    "type": "signal",
+    "severity": 4,
+    "description": "Background radiation that resolves into a hundred voices whenever a ship powers down.",
+    "rewardHint": "Decode lost colonial dialects."
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "msn-demo-001",
+    "callsign": "LANTERN-7",
+    "captain": "Talia Voss",
+    "sectorId": "solstice-drift",
+    "objective": "Map the Ghost Lighthouse transmission cone before the next flare cycle.",
+    "shipClass": "courier",
+    "status": "briefing",
+    "riskBudget": 3,
+    "createdAt": "2026-05-02T10:00:00.000Z"
+  }
+]
