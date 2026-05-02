@@ -10,6 +10,16 @@ const seedMissionsPath = path.join(dataDir, "missions.seed.json");
 const runtimeMissionsPath = path.join(dataDir, "missions.runtime.json");
 
 const app = express();
+const routeManifest = [
+  "GET /docs",
+  "GET /api/health",
+  "GET /api/sectors",
+  "GET /api/sectors/:id",
+  "GET /api/anomalies",
+  "GET /api/feed",
+  "GET /api/missions",
+  "POST /api/missions"
+];
 
 app.use(express.json());
 
@@ -25,8 +35,13 @@ app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
     service: "cosmic-archive-api",
+    routes: routeManifest,
     timestamp: new Date().toISOString()
   });
+});
+
+app.get("/api/routes", (_req, res) => {
+  res.json({ routes: routeManifest });
 });
 
 app.get("/api/sectors", (req, res) => {
