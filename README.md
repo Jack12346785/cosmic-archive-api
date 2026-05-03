@@ -1,6 +1,6 @@
 # Cosmic Archive API
 
-Cosmic Archive API is a small sci fi API for sectors, anomalies, and custom mission briefs, all accessible via web documentation and designed with public-friendly project requirements in mind, such as multiple GET endpoints, a POST endpoint, browser docs located at `/docs`, and a README.
+Cosmic Archive API is a small sci fi API for sectors, anomalies, and custom mission briefs, all accessible via web documentation and designed with public friendly project requirements in mind, such as multiple GET endpoints, a POST endpoint, browser docs located at `/docs`, and a README.
 
 ## What it does
 
