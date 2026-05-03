@@ -1,13 +1,13 @@
 # Cosmic Archive API
 
-Cosmic Archive API is a small public-friendly sci fi API for sectors, anomalies, and custom mission briefs. It is designed to satisfy project submission requirements cleanly: multiple `GET` endpoints, a `POST` endpoint, browser docs at `/docs`, and a hand written README.
+Cosmic Archive API is a small sci fi API for sectors, anomalies, and custom mission briefs, all accessible via web documentation and designed with public-friendly project requirements in mind, such as multiple GET endpoints, a POST endpoint, browser docs located at `/docs`, and a README.
 
 ## What it does
 
-- Lists named space sectors with danger ratings and station data.
-- Lists anomalies with filters for severity, type, and sector.
-- Returns a mixed exploration feed for quick demos.
-- Accepts user created mission briefs and stores them in a local JSON file.
+- Provides a list of named space sectors and their dangers and stations.
+- Provides a list of anomalies, with filters for severity, anomaly types, and space sectors.
+- Generates a mixed exploration feed for demonstration purposes.
+- Takes mission briefs submitted by users and stores them in a local JSON file.
 
 ## Endpoints
 
@@ -20,22 +20,22 @@ Cosmic Archive API is a small public-friendly sci fi API for sectors, anomalies,
 - `POST /api/missions`
 - `GET /docs`
 
-Docs include example `curl` requests and are available at `/docs`.
+The documentation includes examples of `curl` commands and can be found at `/docs`.
 
-## Local run
+## Running locally
 
-This project expects Node 20+.
+The project requires Node 20 or later.
 
 ```bash
 npm install
 npm start
 ```
 
-Then open:
+Afterwards, access the following URL:
 
 - `http://localhost:3000/docs`
 
-## Example requests
+## Sample requests
 
 ```bash
 curl http://localhost:3000/api/health
@@ -52,17 +52,17 @@ curl -X POST http://localhost:3000/api/missions \
 
 ## Deployment
 
-A `render.yaml` file is included for quick deployment to Render, which provides a stable public URL once connected to a GitHub repository.
+There is a `render.yaml` file provided, which allows you to deploy this project quickly on Render. After connecting to your GitHub repository, you will receive a public link.
 
-Suggested flow:
+Deployment steps:
 
-1. Push this folder to a public GitHub repository.
-2. Create a new Render Blueprint deployment from that repo.
-3. Render will build with `npm install` and run with `npm start`.
-4. Your API docs will then be publicly available at `https://<your-service>.onrender.com/docs`.
+1. Commit this folder to a GitHub repository.
+2. Create a new deployment using the Render Blueprint from the repository.
+3. Build the app with `npm install` and run with `npm start`.
+4. Your API documentation will now be live on `https://<your-service>.onrender.com/docs`.
 
-## Notes
+## Additional notes
 
-- Auth is not required.
-- Mission data is persisted to `data/missions.runtime.json`.
-- Seed data lives in `data/` and can be extended easily.
+- No authentication is required.
+- Mission information is saved to `data/missions.runtime.json`.
+- Seed data exists in the `data/` directory and can be easily expanded.
