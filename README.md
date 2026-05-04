@@ -1,4 +1,4 @@
-Cosmic Archive API is a tiny, star-spangled API. It deals with sectors, anomalies, and mission briefs created by users. You can find its documentation on the web, crafted for public accessibility: many GET endpoints, one POST endpoint, browser docs at /docs, and a clear README file.
+Cosmic Archive API is a tiny, star spangled API. It deals with sectors, anomalies, and mission briefs created by users. You can find its documentation on the web, crafted for public accessibility: many GET endpoints, one POST endpoint, browser docs at /docs, and a clear README file.
 
 What it does
 - Returns a list of space sectors, including names, danger levels, and stations.
@@ -40,7 +40,7 @@ curl -X POST http://localhost:3000/api/missions \
   }'
 
 Deployment process
-This project ships with a deploy-ready render.yaml, meaning you can deploy it instantly to Render. Connect this codebase to a GitHub repository and enjoy your live project link.
+This project ships with a deploy ready render.yaml, meaning you can deploy it instantly to Render. Connect this codebase to a GitHub repository and enjoy your live project link.
 
 Deployment steps
 1) Upload this project to your GitHub account.
