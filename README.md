@@ -32,10 +32,10 @@ curl http://localhost:3000/api/health
 curl "http://localhost:3000/api/sectors?dangerLevel=high"
 curl "http://localhost:3000/api/anomalies?type=signal&minSeverity=4"
 curl -X POST http://localhost:3000/api/missions \
-  -H "Content-Type: application/json" \
+  -H "Content Type: application/json" \
   -d '{
     "captain": "Mira Keene",
-    "sectorId": "ember-null",
+    "sectorId": "ember null",
     "objective": "Capture thermal readings inside Ember Mouth"
   }'
 
@@ -46,7 +46,7 @@ Deployment steps
 1) Upload this project to your GitHub account.
 2) Make a new Render app using the Blueprint feature from that repository.
 3) Execute npm install and npm start.
-4) Visit the browser docs page at https://<your-service>.onrender.com/docs.
+4) Visit the browser docs page at [api docs](https://cosmic-archive-api.onrender.com/docs)
 
 Additional info about this project
 - Authentication is not necessary.
