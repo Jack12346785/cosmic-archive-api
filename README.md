@@ -39,14 +39,6 @@ curl -X POST http://localhost:3000/api/missions \
     "objective": "Capture thermal readings inside Ember Mouth"
   }'
 
-Deployment process
-This project ships with a deploy ready render.yaml, meaning you can deploy it instantly to Render. Connect this codebase to a GitHub repository and enjoy your live project link.
-
-Deployment steps
-1) Upload this project to your GitHub account.
-2) Make a new Render app using the Blueprint feature from that repository.
-3) Execute npm install and npm start.
-4) Visit the browser docs page at [api docs](https://cosmic-archive-api.onrender.com/docs)
 
 Additional info about this project
 - Authentication is not necessary.
