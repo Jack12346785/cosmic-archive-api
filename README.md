@@ -6,6 +6,9 @@ What it does
 - Shows how to implement an exploration feed.
 - Allows users to submit their mission briefs and store them in a local JSON file.
 
+docs:
+https://cosmic-archive-api.onrender.com/docs
+
 Endpoints
 - GET /api/health
 - GET /api/sectors
