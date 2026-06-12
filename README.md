@@ -1,4 +1,4 @@
-Cosmic Archive API is a tiny, star spangled API. It deals with sectors, anomalies, and mission briefs created by users. You can find its documentation on the web, crafted for public accessibility: many GET endpoints, one POST endpoint, browser docs at /docs, and a clear README file.
+The Cosmic Archive API is a small, open source API that manages sectors, anomalies and mission briefs. Its documentation is publicly accessible on the web. It includes many GET endpoints, one POST endpoint, browser documentation at /docs and a clear README file.
 
 What it does
 - Returns a list of space sectors, including names, danger levels, and stations.
